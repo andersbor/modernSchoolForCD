@@ -10,7 +10,8 @@ namespace modernSchoolForCD.Managers
         {
             new Student {Id = _nextId++, Name = "John", Semester = 1},
             new Student {Id = _nextId++, Name = "Jane", Semester = 2},
-            new Student {Id = _nextId++, Name = "Jack", Semester = 3}
+            new Student {Id = _nextId++, Name = "Jack", Semester = 3},
+            new Student {Id =_nextId++, Name = "Joe", Semester = 3}
         };
 
         public List<Student> GetAll()
