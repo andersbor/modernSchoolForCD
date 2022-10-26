@@ -30,7 +30,7 @@ namespace modernSchoolForCD.Models
         {
             if (Semester < 1 || Semester > 8)
             {
-                throw new ArgumentException("Semester must be between 1 and 8");
+                throw new ArgumentOutOfRangeException("Semester must be between 1 and 8");
             }
         }
 

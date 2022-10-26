@@ -11,25 +11,28 @@ namespace modernSchoolForCD.Models.Tests
     [TestClass()]
     public class StudentTests
     {
+        private Student student = new() { Name = "John", Semester = 3 };
+        private Student studentNameNull = new() { Name = null, Semester = 3 };
+        private Student studentName1 = new() { Name = "A", Semester = 2 };
+
         [TestMethod()]
         public void ToStringTest()
         {
-
+            string str = student.ToString();
+            Assert.AreEqual("0 John 3", str);
         }
 
         [TestMethod()]
         public void ValidateNameTest()
         {
-            Student student = new() { Name = "John", Semester = 3 };
             student.ValidateName();
-            Student studentNameNull = new() { Name = null, Semester = 3 };
             Assert.ThrowsException<ArgumentNullException>(() => studentNameNull.ValidateName());
         }
 
         [TestMethod()]
         public void ValidateSemesterTest()
         {
-            Assert.Fail();
+            Assert.ThrowsException<ArgumentException>(() => studentName1.ValidateName());
         }
 
         [TestMethod()]
