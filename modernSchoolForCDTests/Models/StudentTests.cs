@@ -29,7 +29,7 @@ namespace modernSchoolForCD.Models.Tests
         [TestMethod()]
         public void ValidateSemesterTest()
         {
-
+            Assert.Fail();
         }
 
         [TestMethod()]
